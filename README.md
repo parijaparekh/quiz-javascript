@@ -33,7 +33,7 @@ THEN I can save my initials and my score
 
 The quiz questions are based on Javascript. The question array has 5 multiple choice questions(MCQ) along with their answers stored. 
 When the user starts the quiz:
-```
+
 The timer starts. The timer value can be changed via the counter constant.
 He is prompted with a MCQ selected randomly from the question array.
 User submits his answer. He is provided a feedback whether his answer is right or wrong. 
@@ -45,24 +45,22 @@ Currently the score is set to the timer; value remaining at the end of quiz.
 After the score is stored, the user is displayed the score card. 
 The score card includes the scores list; the scores and initials saved against all the tests taken on this client system.   
 The user can again click the start button to retake the quiz. 
-```
+
 
 
 ## Error Handling
 
-```
 No MCQ can go unanswered. 
 Start button disbales once the quiz starts. It then gets enabled only after the user score is saved.
 User has to enter the initials or name to store the score. 
 Quiz questions are prompted till the counter hits 0 or the system runs out of questions. 
-```
+
 
 ## Improvements
 
-```
 The scores list is not sorted on scores. 
 Quiz question list is just set to 5. This should be expanded. 
 A system that allows the questions to be populated from an external source can be built in extension to this.  
-```
+
 
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
