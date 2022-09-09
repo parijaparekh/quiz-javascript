@@ -1,3 +1,4 @@
+//declarations
 const questions = [
 {
     "question": "Which statement cannot be used to declare a variable in Javascript",
@@ -69,6 +70,7 @@ let userScore = [];
 feedbackEl.setAttribute('style', 'white-space: pre;');
 
 // functions
+//renders options of the MCQ
 function renderOptions(parentEl, optionsList){
     var a = optionsList.map((option) => {
         return `<div><input type="radio" name="answer" value="${option.value}" id="${option.id}">
@@ -76,7 +78,7 @@ function renderOptions(parentEl, optionsList){
         </div>`});
     parentEl.innerHTML += a.join(' ');   
 }
-
+//check the value provided by the user
 function getCheckedValue(groupBy){
     var options = document.getElementsByName(groupBy);
     for(i = 0; i < options.length; i++){
@@ -85,7 +87,7 @@ function getCheckedValue(groupBy){
         }
     }
 }
-
+//clear local storage on every start
 function resetLocalStorage()
 {   userQuestions = [];
     localStorage.setItem("userQuestions", JSON.stringify(userQuestions));
@@ -107,7 +109,7 @@ function stopQuiz(){
     clearInterval(timerId);
     displayScoreForm();
 }
-
+//function to render the question. The question is selected randomly
 /* get a random index and populate the question div */
 function renderQuestion(documentPos){
     var repeated = true;
@@ -198,6 +200,7 @@ function atStart(){
     console.log("In function")
     questionEl.textContent = "";
     feedbackEl.textContent = "";
+    scoreListOlEl.textContent = "";
     timerEl.style.display = "block";
     questionEl.style.display = "block";
     scoreCardEl.style.display = "none";
@@ -219,7 +222,7 @@ function showscoreslist(){
         for (var i = 0; i < userScore.length; i++){
             var obj = userScore[i];
             liEl = document.createElement('li');
-            liEl.textContent = `${obj.initials} --- ${obj.score}`;
+            liEl.textContent = `${obj.initials} : ${obj.score}`;
             scoreListOlEl.appendChild(liEl); 
         } // end of for loop       
     }
@@ -273,6 +276,7 @@ startButtonEl.addEventListener("click", function(event){
 
 scoreInitialsEl.addEventListener("submit", function(event){
     event.preventDefault();
+    userScore = [];
     if (initialsEl.value == ""){
         window.alert("Enter initials in the text-box");
     }
@@ -285,11 +289,13 @@ scoreInitialsEl.addEventListener("submit", function(event){
         localStorage.setItem("scoreList", JSON.stringify(userScore));
         initialsEl.value = "AB";
         showscoreslist();
-        startButtonEl.disabled = false;
+        startButtonEl.disabled = false;      
     }
 })
 
 clearButtonEl.addEventListener("click", function(event){
     console.log("Finally reached");
+    //scoreListDivEl.textContent = "";
+    scoreListOlEl.textContent = "";
     scoreListDivEl.style.display = "none";
 })

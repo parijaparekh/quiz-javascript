@@ -78,5 +78,26 @@ section {
      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
     margin: 60px auto;
     padding: 20px;
-    height: 25px;    
+    height: 25px;        
+}
+
+.ul-card{
+    background-color:#eceff1;
+    border: 1px solid #65769b;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+     rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: 60px auto;
+    padding: 20px;
+    width: 60vw; 
+}
+
+.ul-text{
+    width: 80%;
+    list-style-type:  circle;
+    list-style-position: inside;
+}
+
+li{
+    font-style: normal;
 }
