@@ -13,20 +13,20 @@ body {
 }
 
 button {
-    background: radial-gradient(circle, rgba(240,230,140,1) 0%, rgba(187,96,33,0.9542191876750701) 100%);
+    background: #cddc39 0%;
     border-radius: 8px;
-    color: #13293d;
+    color: #474d71;
     cursor: pointer;
-    font-size: 2em;
+    font-size: 1.5em;
     letter-spacing: 0.21px;
-    line-height: 16px;
+    line-height: 1px;
     max-width: 255px;
     padding: 20px 52px;
     text-align: center;
     transition-duration: 0.15s;
     transition-property: background-color;
     transition-timing-function: linear;
-    margin-top: 0.6em;
+    margin-top: 1.6em;   
 }
 
 header {
@@ -46,7 +46,7 @@ main {
 section {
     flex: 0 auto;
     padding: 8px;
-    margin-top: 50px;
+    margin-top: 25px;
     background-color: white;
     border-radius: 8px;
 }
@@ -56,16 +56,27 @@ section {
     text-align:center;
 }
   
-
-.card {
-    display: block;
-    background-color:	#FFFFE0;
+.card-hide {
+    display: none;
+    background-color:#eceff1;
     border: 1px solid #eceff1;
     border-radius: 8px;
     box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
-      rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+     rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
     margin: 60px auto;
     padding: 20px;
-    width: 80vw;
-  }
-  
+    width: 80vw;   
+}
+
+.timer-card{
+    display: none;
+    float : right;
+    background-color:#eceff1;
+    border: 1px solid #030449;
+    border-radius: 8px;
+    box-shadow: rgba(60, 64, 67, 2) 0 1px 2px 0,
+     rgba(60, 64, 67, 0.15) 0 2px 4px 3px;
+    margin: 60px auto;
+    padding: 20px;
+    height: 25px;    
+}
