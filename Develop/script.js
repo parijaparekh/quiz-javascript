@@ -1,48 +1,48 @@
 const questions = [
 {
-    "question": "What is coding",
+    "question": "Which statement cannot be used to declare a variable in Javascript",
     "options": [
-        {id: '1', value: 'a'}, 
-        {id: '2', value: 'b'}, 
-        {id :'3', value: 'cscs'}, 
-        {id: '4', value: 'dasdas'}],
-    "ans": "a"
+        {id: '1', value: 'let'}, 
+        {id: '2', value: 'var'}, 
+        {id :'3', value: 'int'}, 
+        {id: '4', value: 'const'}],
+    "ans": "int"
 },
 {
-    "question": "dbakdkadbkad",
+    "question": "Which of the following is an array method",
     "options": [
-        {id: '1', value: 'a'}, 
-        {id: '2', value: 'b'}, 
-        {id :'3', value: 'cscs'}, 
-        {id: '4', value: 'dasdas'}],
-    "ans": "b"
+        {id: '1', value: 'map'}, 
+        {id: '2', value: 'filter'}, 
+        {id :'3', value: 'reduce'}, 
+        {id: '4', value: 'all of these'}],
+    "ans": "all of these"
 },
 {
-    "question": "eqweqwewewq",
+    "question": "What is the full form of DOM",
     "options": [
-        {id: '1', value: 'a'}, 
-        {id: '2', value: 'b'}, 
-        {id :'3', value: 'cscs'}, 
-        {id: '4', value: 'dasdas'}],
-    "ans": "cscs"
+        {id: '1', value: 'Data Object Model'}, 
+        {id: '2', value: 'Document or Model'}, 
+        {id :'3', value: 'Document Object Model'}, 
+        {id: '4', value: 'Document Object Medium'}],
+    "ans": "Document Object Model"
 },
 {
-    "question": "mjmjymy",
+    "question": "Which of the following are the Object methods",
     "options": [
-        {id: '1', value: 'a'}, 
-        {id: '2', value: 'b'}, 
-        {id :'3', value: 'cscs'}, 
-        {id: '4', value: 'dasdas'}],
-    "ans": "dasdas"
+        {id: '1', value: 'Object.keys(obj)'}, 
+        {id: '2', value: 'Object.values(obj)'}, 
+        {id :'3', value: 'Object.entries(obj)'}, 
+        {id: '4', value: 'All of these'}],
+    "ans": "All of these"
 },
 {
-    "question": "dadaddad adda",
+    "question": "Which method is used to convert JSON string to a JSON object?",
     "options": [
-        {id: '1', value: 'a'}, 
-        {id: '2', value: 'b'}, 
-        {id :'3', value: 'cscs'}, 
-        {id: '4', value: 'dasdas'}],
-    "ans": "a"
+        {id: '1', value: 'JSON.parse(string)'}, 
+        {id: '2', value: 'JSON.convertToObject(string)'}, 
+        {id :'3', value: 'JSON.object(string)'}, 
+        {id: '4', value: 'None of these'}],
+    "ans": "JSON.parse(string)"
 },]
 let userQuestions = [];
 const incorrectPenalty = 10; // lose 10secs
