@@ -56,9 +56,14 @@ User has to enter the initials or name to store the score.
 Quiz questions are prompted till the counter hits 0 or the system runs out of questions. 
 
 
+## Additions
+
+The scores list is now sorted on scores. 
+This feature along with some styling and highlighting the current user has been implemented on 10/9/2022.  
+
+
 ## Improvements
 
-The scores list is not sorted on scores. 
 Quiz question list is just set to 5. This should be expanded. 
 A system that allows the questions to be populated from an external source can be built in extension to this.  
 

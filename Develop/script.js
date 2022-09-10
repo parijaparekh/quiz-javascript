@@ -212,20 +212,29 @@ function atStart(){
     updateTimerEls(counter);
 }
 
-function showscoreslist(){
+function showscoreslist(currentUS){
     scoreCardEl.style.display = "none";
     timerEl.style.display = "none";
     feedbackEl.style.display = "none";
     scoreListDivEl.style.display = "block";
-    if (localStorage.hasOwnProperty("scoreList")){
-        userScore = JSON.parse(localStorage.getItem("scoreList"));
+    // changed to add sorting of scores array.
+    userScore = sortScores();
+    if (userScore.length > 0){
         for (var i = 0; i < userScore.length; i++){
             var obj = userScore[i];
             liEl = document.createElement('li');
             liEl.textContent = `${obj.initials} : ${obj.score}`;
+            if (currentUS.initials === obj.initials){
+                liEl.setAttribute("style","background-color:#cddc39;");
+            }
             scoreListOlEl.appendChild(liEl); 
-        } // end of for loop       
-    }
+        } // end of for loop
+    }else { // error checking for no userScore list. This case will mostly not hit. 
+        pEl = document.createElement("p");
+        pEl.textContent ="No scores stored on client side.";
+        pEl.setAttribute("style", "color:darkblue" );
+        scoreListOlEl.appendChild(pEl);
+    }          
 }
 
 submitButtonEl.addEventListener("click", function(event){
@@ -288,7 +297,7 @@ scoreInitialsEl.addEventListener("submit", function(event){
         userScore.unshift(currentUS);
         localStorage.setItem("scoreList", JSON.stringify(userScore));
         initialsEl.value = "AB";
-        showscoreslist();
+        showscoreslist(currentUS);
         startButtonEl.disabled = false;      
     }
 })
@@ -299,3 +308,17 @@ clearButtonEl.addEventListener("click", function(event){
     scoreListOlEl.textContent = "";
     scoreListDivEl.style.display = "none";
 })
+
+// sort the scoreList:
+//Added the function to sort the scores array based on scores.
+//Added on 10/9/2022 
+function sortScores(){
+    let scoreArray = [];
+    if (localStorage.hasOwnProperty("scoreList")){
+        scoreArray = JSON.parse(localStorage.getItem("scoreList"));
+    }
+    scoreArray.sort((a,b) => {
+        return b.score - a.score;
+    })
+    return scoreArray;
+}
